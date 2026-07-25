@@ -9,25 +9,34 @@
 
 document.addEventListener("DOMContentLoaded", () => {
 
-  /* ---------------- navigatiebalk kleurt bij scrollen ---------------- */
+  /* ---------------- navigatiebalk kleurt bij scrollen -----------------
+     Alleen op pagina's mét een fullscreen hero (nu enkel de homepage)
+     start de balk transparant en wordt ze pas effen bij scrollen. Op
+     alle andere pagina's (die geen donkere hero hebben om overheen te
+     zweven) staat de balk altijd effen, anders is de witte tekst
+     onleesbaar op een lichte pagina-achtergrond. */
   const nav = document.querySelector(".site-nav");
+  const hero = document.querySelector(".hero");
   if (nav){
-    const updateNav = () => {
-      if (window.scrollY > 40) nav.classList.add("is-scrolled");
-      else nav.classList.remove("is-scrolled");
-    };
-    updateNav();
-    window.addEventListener("scroll", updateNav, { passive: true });
+    if (hero){
+      const updateNav = () => {
+        if (window.scrollY > 40) nav.classList.add("is-scrolled");
+        else nav.classList.remove("is-scrolled");
+      };
+      updateNav();
+      window.addEventListener("scroll", updateNav, { passive: true });
+    } else {
+      nav.classList.add("is-scrolled");
+    }
   }
 
-  /* ---------------- mega-menu vullen met categorieën ---------------- */
+  /* ---------------- mini-menu vullen met categorienamen ----------------
+     Bewust enkel tekst, geen foto's: de bezoeker kiest hier snel een
+     categorie. Foto's verschijnen pas op de portfolio-pagina zelf. */
   const megaMenu = document.querySelector("[data-mega-menu]");
   if (megaMenu && typeof CATEGORIEEN !== "undefined"){
     megaMenu.innerHTML = CATEGORIEEN.map(cat => `
-      <a href="categorie.html?cat=${cat.slug}">
-        <div class="cat-thumb"><img src="${cat.cover}" alt="${cat.naam}" loading="lazy"></div>
-        <span class="cat-naam">${cat.naam}</span>
-      </a>
+      <a href="categorie.html?cat=${cat.slug}">${cat.naam}</a>
     `).join("");
   }
 
