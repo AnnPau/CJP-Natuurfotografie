@@ -149,42 +149,54 @@ h1,h2,h3,h4{
 
 .nav-toggle{ display:none; }
 
-/* mega-menu: categorieën bij hover op "Portfolio" */
+/* mini-menu: enkel categorienamen bij hover op "Portfolio" — bewust
+   zonder foto's, zodat je snel en rustig een categorie kiest. Foto's
+   verschijnen pas op de portfolio-pagina zelf. */
 .mega-menu{
   position:absolute;
   top: 100%; left: 50%;
-  transform: translate(-50%, 8px);
+  transform: translate(-50%, 4px);
   margin-top: 22px;
+  min-width: 220px;
   background: var(--c-ivoor);
   color: var(--c-inkt);
-  box-shadow: 0 24px 60px rgba(10,10,8,.25);
-  padding: 22px;
-  display:grid;
-  grid-template-columns: repeat(5, 128px);
-  gap: 16px;
+  box-shadow: 0 20px 48px rgba(10,10,8,.22);
+  border-top: 2px solid var(--c-goud);
+  padding: 10px 0;
+  display:flex;
+  flex-direction: column;
   opacity:0;
   visibility:hidden;
-  transition: opacity .3s var(--ease), transform .3s var(--ease), visibility .3s;
+  transition: opacity .25s var(--ease), transform .25s var(--ease), visibility .25s;
 }
 .nav-links li.has-menu:hover .mega-menu,
 .nav-links li.has-menu:focus-within .mega-menu{
   opacity:1; visibility:visible; transform: translate(-50%, 0);
 }
-.mega-menu a{ display:block; }
-.mega-menu .cat-thumb{
-  aspect-ratio: 4/5;
-  overflow:hidden;
-  background: var(--c-lijn-licht);
+.mega-menu a{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap: 14px;
+  padding: 13px 22px;
+  font-size:.82rem;
+  letter-spacing:.03em;
+  transition: background .2s, padding-left .2s var(--ease), color .2s;
 }
-.mega-menu .cat-thumb img{ width:100%; height:100%; object-fit:cover; transition: transform .6s var(--ease); }
-.mega-menu a:hover .cat-thumb img{ transform: scale(1.07); }
-.mega-menu .cat-naam{
-  margin-top:.55rem;
-  font-size:.72rem;
-  letter-spacing:.05em;
-  text-transform:uppercase;
-  font-weight:600;
+.mega-menu a::after{
+  content:"→";
+  color: var(--c-goud);
+  opacity:0;
+  transform: translateX(-4px);
+  transition: opacity .2s var(--ease), transform .2s var(--ease);
 }
+.mega-menu a:hover{
+  background: var(--c-ivoor-dim);
+  padding-left: 26px;
+  color: var(--c-goud-dim);
+}
+.mega-menu a:hover::after{ opacity:1; transform: translateX(0); }
+.mega-menu a + a{ border-top: 1px solid var(--c-lijn-licht); }
 
 /* ============================================================== HERO / SLIDESHOW */
 .hero{
@@ -385,39 +397,44 @@ h1,h2,h3,h4{
 .chip.is-active{ background: var(--c-inkt); border-color: var(--c-inkt); color: var(--c-ivoor); }
 .chip-reset{ font-size:.75rem; color: var(--c-goud-dim); text-decoration: underline; margin-left:auto; background:none; border:0; }
 
-/* ============================================================== FOTOGRID */
+/* ============================================================== FOTOGRID
+   Grote, brede foto's (de meeste natuurfoto's zijn liggend), twee naast
+   elkaar op desktop, edge-to-edge over het volle scherm. */
 .photo-grid{
   display:grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 3px;
-  padding: 3px var(--pad) 90px;
-  max-width: var(--maxw); margin:0 auto;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 4px;
+  padding: 4px;
+  width: 100%;
 }
 .photo-card{
   position:relative;
-  aspect-ratio: 4/5;
+  aspect-ratio: 3/2;
   overflow:hidden;
   background: var(--c-lijn-licht);
   display:block;
 }
-.photo-card img{ width:100%; height:100%; object-fit:cover; transition: transform .8s var(--ease); }
-.photo-card:hover img{ transform: scale(1.07); }
+.photo-card img{ width:100%; height:100%; object-fit:cover; transition: transform 1s var(--ease); }
+.photo-card:hover img{ transform: scale(1.05); }
 .photo-card .titel-strip{
   position:absolute; left:0; right:0; bottom:0;
-  padding: 16px 18px;
-  background: linear-gradient(180deg, transparent, rgba(10,10,8,.82));
+  padding: 26px 30px;
+  background: linear-gradient(180deg, transparent, rgba(10,10,8,.78));
   color:#fff;
-  font-size:.85rem;
-  letter-spacing:.02em;
-  transform: translateY(6px);
-  opacity: .92;
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  letter-spacing:.01em;
+  opacity: .96;
 }
 .photo-card[hidden]{ display:none; }
 .empty-state{ padding: 80px var(--pad); text-align:center; color: var(--c-tekst-zacht); display:none; }
 .empty-state.zichtbaar{ display:block; }
 
-@media (max-width: 1080px){ .photo-grid{ grid-template-columns: repeat(3, 1fr); } }
-@media (max-width: 700px){ .photo-grid{ grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 860px){
+  .photo-grid{ grid-template-columns: 1fr; }
+  .photo-card{ aspect-ratio: 4/3; }
+  .photo-card .titel-strip{ font-size: 1.05rem; padding: 18px 20px; }
+}
 
 /* ============================================================== FOTODETAIL */
 .foto-detail{
