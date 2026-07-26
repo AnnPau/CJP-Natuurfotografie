@@ -124,13 +124,24 @@ h1,h2,h3,h4{
   align-items: center;
 }
 .site-nav .logo span{ color: var(--c-goud); }
+
+/* Twee logobestanden: één ontworpen voor een witte/lichte achtergrond,
+   één voor een donkere achtergrond. CSS toont automatisch de juiste
+   versie: op de homepage (transparante balk over de foto) de donkere
+   versie, zodra je scrolt (effen lichte balk) de witte versie. Op alle
+   andere pagina's staat de balk altijd effen, dus daar zie je meteen
+   de witte versie. */
 .site-nav .logo img{
-  height: 38px;
+  height: 56px;
   width: auto;
   display: block;
   transition: height .3s var(--ease);
 }
-.site-nav.is-scrolled .logo img{ height: 30px; }
+.site-nav.is-scrolled .logo img{ height: 46px; }
+
+.site-nav .logo .logo-voor-wit{ display: none; }
+.site-nav.is-scrolled .logo .logo-voor-zwart{ display: none; }
+.site-nav.is-scrolled .logo .logo-voor-wit{ display: block; }
 
 .nav-links{ display:flex; align-items:center; gap: 2.4rem; }
 .nav-links > li{ position: relative; }
@@ -556,7 +567,7 @@ h1,h2,h3,h4{
   padding-bottom: 40px; border-bottom: 1px solid var(--c-lijn-donker);
 }
 .footer-top .logo{ font-family: var(--font-display); font-size:1.3rem; color: var(--c-ivoor); display:inline-flex; align-items:center; }
-.footer-top .logo img{ height: 34px; width:auto; display:block; }
+.footer-top .logo img{ height: 46px; width:auto; display:block; }
 .footer-top .logo span{ color: var(--c-goud); }
 .footer-links{ display:flex; gap: 3.5rem; flex-wrap:wrap; }
 .footer-links h4{ color: var(--c-ivoor); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; font-family: var(--font-body); margin-bottom: 1rem; }
