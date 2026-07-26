@@ -120,8 +120,17 @@ h1,h2,h3,h4{
   font-family: var(--font-display);
   font-size: 1.3rem;
   letter-spacing: .01em;
+  display: inline-flex;
+  align-items: center;
 }
 .site-nav .logo span{ color: var(--c-goud); }
+.site-nav .logo img{
+  height: 38px;
+  width: auto;
+  display: block;
+  transition: height .3s var(--ease);
+}
+.site-nav.is-scrolled .logo img{ height: 30px; }
 
 .nav-links{ display:flex; align-items:center; gap: 2.4rem; }
 .nav-links > li{ position: relative; }
@@ -506,13 +515,14 @@ h1,h2,h3,h4{
   font-family: var(--font-display); color: var(--c-goud); font-size:1.3rem; min-width:1.6rem;
 }
 
+/* zorgt dat #bestelformulier niet achter de vaste navigatiebalk
+   verdwijnt wanneer er via "Bestel deze foto" naartoe gesprongen wordt */
+#bestelformulier{ scroll-margin-top: 100px; }
+
 /* -------------------------------------------------------------- formulier */
 .form-grid{
   display:grid; grid-template-columns: 1fr 1fr; gap: 22px 28px;
   margin-top: 46px;
-  /* zorgt dat #bestelformulier niet achter de vaste navigatiebalk
-     verdwijnt wanneer er via "Bestel deze foto" naartoe gesprongen wordt */
-  scroll-margin-top: 110px;
 }
 .form-grid .volledig{ grid-column: 1 / -1; }
 .veld{ display:flex; flex-direction:column; gap:8px; }
@@ -545,7 +555,8 @@ h1,h2,h3,h4{
   display:flex; justify-content:space-between; gap: 40px; flex-wrap:wrap;
   padding-bottom: 40px; border-bottom: 1px solid var(--c-lijn-donker);
 }
-.footer-top .logo{ font-family: var(--font-display); font-size:1.3rem; color: var(--c-ivoor); }
+.footer-top .logo{ font-family: var(--font-display); font-size:1.3rem; color: var(--c-ivoor); display:inline-flex; align-items:center; }
+.footer-top .logo img{ height: 34px; width:auto; display:block; }
 .footer-top .logo span{ color: var(--c-goud); }
 .footer-links{ display:flex; gap: 3.5rem; flex-wrap:wrap; }
 .footer-links h4{ color: var(--c-ivoor); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; font-family: var(--font-body); margin-bottom: 1rem; }
