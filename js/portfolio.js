@@ -148,7 +148,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <div class="kenmerken">${kenmerkenHtml}</div>
         <h3 style="font-size:1rem;text-transform:uppercase;letter-spacing:.08em;font-family:var(--font-body);font-weight:700;">Beschikbare formaten</h3>
         <ul class="formaten-lijst">${formatenHtml}</ul>
-        <a class="btn btn-goud" href="bestellen.html?foto=${encodeURIComponent(foto.id)}&titel=${encodeURIComponent(foto.titel)}">Bestel deze foto</a>
+        <a class="btn btn-goud" href="bestellen.html?foto=${encodeURIComponent(foto.id)}&titel=${encodeURIComponent(foto.titel)}#bestelformulier">Bestel deze foto</a>
       </div>
     `;
   }
