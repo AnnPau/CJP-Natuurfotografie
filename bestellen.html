@@ -118,6 +118,7 @@
           <option value="ophalen">ophalen</option>
           <option value="levering">leveren</option>
         </select>
+      </div>
       <div class="veld volledig">
         <label for="opmerkingen">Opmerkingen</label>
         <textarea id="opmerkingen" name="opmerkingen" placeholder="Bv. gewenste afwerking, lijst of aluminium, leverdatum, ..."></textarea>
@@ -190,6 +191,7 @@ E-mail: ${data.get("email")}
 Telefoon: ${data.get("telefoon")}
 Foto: ${data.get("fotoNaam")}
 Formaat: ${data.get("formaat")}
+Ontvangstmethode: ${data.get("ontvangstmethode")}
 Opmerkingen: ${data.get("opmerkingen")}`
     );
     window.location.href = `mailto:info@wilderenstil.be?subject=${onderwerp}&body=${body}`;
