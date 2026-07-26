@@ -132,10 +132,10 @@ h1,h2,h3,h4{
    andere pagina's staat de balk altijd effen, dus daar zie je meteen
    de witte versie. */
 .site-nav .logo img{
-  height: 104px;
+  height: 76px;
   width: auto;
   display: block;
-  margin: -18px 0;   /* laat het logo groter ogen zonder de navbalk zelf hoger te maken */
+  margin: -8px 0;   /* laat het logo groter ogen zonder de navbalk zelf hoger te maken */
   transition: height .3s var(--ease), margin .3s var(--ease);
 }
 .site-nav.is-scrolled .logo img{ height: 84px; margin: -14px 0; }
@@ -577,7 +577,7 @@ h1,h2,h3,h4{
   padding-bottom: 40px; border-bottom: 1px solid var(--c-lijn-donker);
 }
 .footer-top .logo{ font-family: var(--font-display); font-size:1.3rem; color: var(--c-ivoor); display:inline-flex; align-items:center; }
-.footer-top .logo img{ height: 58px; width:auto; display:block; }
+.footer-top .logo img{ height: 84px; width:auto; display:block; }
 .footer-top .logo span{ color: var(--c-goud); }
 .footer-links{ display:flex; gap: 3.5rem; flex-wrap:wrap; }
 .footer-links h4{ color: var(--c-ivoor); font-size:.72rem; letter-spacing:.14em; text-transform:uppercase; font-family: var(--font-body); margin-bottom: 1rem; }
