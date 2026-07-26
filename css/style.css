@@ -510,6 +510,9 @@ h1,h2,h3,h4{
 .form-grid{
   display:grid; grid-template-columns: 1fr 1fr; gap: 22px 28px;
   margin-top: 46px;
+  /* zorgt dat #bestelformulier niet achter de vaste navigatiebalk
+     verdwijnt wanneer er via "Bestel deze foto" naartoe gesprongen wordt */
+  scroll-margin-top: 110px;
 }
 .form-grid .volledig{ grid-column: 1 / -1; }
 .veld{ display:flex; flex-direction:column; gap:8px; }
