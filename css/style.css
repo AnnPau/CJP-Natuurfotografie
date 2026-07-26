@@ -362,12 +362,16 @@ h1,h2,h3,h4{
 .page-header p.lead{ max-width: 58ch; color: rgba(250,249,245,.78); font-size: 1.05rem; }
 .page-header.licht p.lead{ color: var(--c-tekst-zacht); }
 
-/* ============================================================== PORTFOLIO — categorieën overzicht */
+/* ============================================================== PORTFOLIO — categorieën overzicht
+   Met witruimte tussen de categorieën en voldoende ruimte aan de
+   buitenkant, gecentreerd op de pagina. */
 .cat-grid{
   display:grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 2px;
-  background: var(--c-lijn-licht);
+  gap: 28px;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 0 var(--pad) 40px;
 }
 .cat-card{
   position:relative;
@@ -391,8 +395,8 @@ h1,h2,h3,h4{
 }
 .cat-card .label .eyebrow{ display:block; margin-bottom:.3rem; }
 .cat-card .label h3{ font-size: 1.5rem; margin:0; }
-@media (max-width: 860px){ .cat-grid{ grid-template-columns: 1fr 1fr; } }
-@media (max-width: 560px){ .cat-grid{ grid-template-columns: 1fr; } }
+@media (max-width: 860px){ .cat-grid{ grid-template-columns: 1fr 1fr; gap: 20px; } }
+@media (max-width: 560px){ .cat-grid{ grid-template-columns: 1fr; gap: 20px; } }
 
 /* ============================================================== FILTERS (categoriepagina) */
 .filter-bar{
@@ -419,13 +423,15 @@ h1,h2,h3,h4{
 
 /* ============================================================== FOTOGRID
    Grote, brede foto's (de meeste natuurfoto's zijn liggend), twee naast
-   elkaar op desktop, edge-to-edge over het volle scherm. */
+   elkaar op desktop, met witruimte ertussen en voldoende ruimte aan de
+   buitenkant. Gecentreerd op de pagina. */
 .photo-grid{
   display:grid;
   grid-template-columns: repeat(2, 1fr);
-  gap: 4px;
-  padding: 4px;
-  width: 100%;
+  gap: 40px 36px;
+  max-width: var(--maxw);
+  margin: 0 auto;
+  padding: 48px var(--pad) 90px;
 }
 .photo-card{
   position:relative;
@@ -451,7 +457,7 @@ h1,h2,h3,h4{
 .empty-state.zichtbaar{ display:block; }
 
 @media (max-width: 860px){
-  .photo-grid{ grid-template-columns: 1fr; }
+  .photo-grid{ grid-template-columns: 1fr; gap: 28px; padding: 32px var(--pad) 70px; }
   .photo-card{ aspect-ratio: 4/3; }
   .photo-card .titel-strip{ font-size: 1.05rem; padding: 18px 20px; }
 }
