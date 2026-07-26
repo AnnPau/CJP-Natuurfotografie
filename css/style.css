@@ -423,26 +423,27 @@ h1,h2,h3,h4{
 .chip-reset{ font-size:.75rem; color: var(--c-goud-dim); text-decoration: underline; margin-left:auto; background:none; border:0; }
 
 /* ============================================================== FOTOGRID
-   Grote, brede foto's (de meeste natuurfoto's zijn liggend), twee naast
-   elkaar op desktop, met witruimte ertussen en voldoende ruimte aan de
-   buitenkant. Gecentreerd op de pagina. */
+   Twee kolommen op desktop, elke foto in haar eigen, natuurlijke
+   formaat (geen uitsnede) — liggende en staande foto's door elkaar.
+   Foto's die boven elkaar in dezelfde kolom staan, sluiten mooi aan
+   met een vaste tussenmarge. */
 .photo-grid{
-  display:grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px 36px;
-  max-width: var(--maxw);
+  column-count: 2;
+  column-gap: 36px;
+  max-width: 1560px;
   margin: 0 auto;
   padding: 64px var(--pad) 90px;
 }
 .photo-card{
   position:relative;
-  aspect-ratio: 3/2;
+  display:block;
+  break-inside: avoid;
+  margin-bottom: 36px;
   overflow:hidden;
   border-radius: 16px;
   background: var(--c-lijn-licht);
-  display:block;
 }
-.photo-card img{ width:100%; height:100%; object-fit:cover; transition: transform 1s var(--ease); }
+.photo-card img{ width:100%; height:auto; display:block; transition: transform 1s var(--ease); }
 .photo-card:hover img{ transform: scale(1.05); }
 .photo-card .titel-strip{
   position:absolute; left:0; right:0; bottom:0;
@@ -459,8 +460,8 @@ h1,h2,h3,h4{
 .empty-state.zichtbaar{ display:block; }
 
 @media (max-width: 860px){
-  .photo-grid{ grid-template-columns: 1fr; gap: 28px; padding: 32px var(--pad) 70px; }
-  .photo-card{ aspect-ratio: 4/3; }
+  .photo-grid{ column-count: 1; padding: 32px var(--pad) 70px; }
+  .photo-card{ margin-bottom: 24px; }
   .photo-card .titel-strip{ font-size: 1.05rem; padding: 18px 20px; }
 }
 
