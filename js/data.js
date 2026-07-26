@@ -21,29 +21,34 @@
    -------------------------------------------------------------------- */
 const CATEGORIEEN = [
   {
+    slug: "vogels",
+    naam: "Vogels",
+    cover: "images/cover-vogels.jpg"
+  },
+  {
+    slug: "zoogdieren",
+    naam: "Zoogdieren",
+    cover: "images/cover-zoogdieren.jpg"
+  },
+  {
+    slug: "reptielen",
+    naam: "Reptielen",
+    cover: "images/cover-reptielen.jpg"
+  },
+  {
+    slug: "insecten",
+    naam: "Insecten",
+    cover: "images/cover-water.jpg"
+  },
+  {
     slug: "landschappen",
     naam: "Landschappen",
     cover: "images/cover-landschappen.jpg"
   },
   {
-    slug: "dieren",
-    naam: "Dieren & Vogels",
-    cover: "images/cover-dieren.jpg"
-  },
-  {
-    slug: "macro",
-    naam: "Macro & Details",
-    cover: "images/cover-macro.jpg"
-  },
-  {
-    slug: "water",
-    naam: "Water & Kust",
-    cover: "images/cover-water.jpg"
-  },
-  {
-    slug: "lucht",
-    naam: "Lucht & Licht",
-    cover: "images/cover-lucht.jpg"
+    slug: "paddenstoelen_planten",
+    naam: "Paddenstoelen & planten",
+    cover: "images/cover-paddenstoelen.jpg"
   }
 ];
 
@@ -68,11 +73,11 @@ const FOTOS = [
   {
     id: "vos-in-de-mist",
     titel: "Vos in de ochtendmist",
-    categorie: "dieren",
+    categorie: "zoogdieren",
     filters: {
       seizoen: "Winter",
       locatie: "Ardennen",
-      soort: "Zoogdier"
+      soort: "Vos"
     },
     afbeelding: "images/foto-vos-in-de-mist.jpg",
     beschrijving: "Vlak na zonsopgang stak deze vos het open veld over. De mist demptte alle geluid, waardoor ik dichterbij kon sluipen dan normaal mogelijk is.",
@@ -125,7 +130,7 @@ const FOTOS = [
   {
     id: "ree-in-het-kreupelhout",
     titel: "Ree in het kreupelhout",
-    categorie: "dieren",
+    categorie: "zoogdieren",
     filters: { seizoen: "Lente", locatie: "Veluwe", soort: "Zoogdier" },
     afbeelding: "images/foto-ree.jpg",
     beschrijving: "Een jonge ree kijkt op vanuit het kreupelhout, verrast door de stilte van de vroege ochtend.",
@@ -137,7 +142,7 @@ const FOTOS = [
   {
     id: "ijsvogel-op-de-uitkijk",
     titel: "IJsvogel op de uitkijk",
-    categorie: "dieren",
+    categorie: "vogels",
     filters: { seizoen: "Zomer", locatie: "Vlaanderen", soort: "Vogel" },
     afbeelding: "images/foto-ijsvogel.jpg",
     beschrijving: "Na drie ochtenden wachten in de schuilhut kwam deze ijsvogel eindelijk binnen bereik van de lens.",
@@ -150,7 +155,7 @@ const FOTOS = [
   {
     id: "dauwdruppel-op-spinnenweb",
     titel: "Dauwdruppel op spinnenweb",
-    categorie: "macro",
+    categorie: "insecten",
     filters: { seizoen: "Herfst", locatie: "Tuin", onderwerp: "Insect" },
     afbeelding: "images/foto-spinnenweb.jpg",
     beschrijving: "Elke druppel op dit web weerspiegelt de omgeving in miniatuur. Genomen met een macrolens vlak na zonsopgang.",
@@ -162,7 +167,7 @@ const FOTOS = [
   {
     id: "varenblad-in-close-up",
     titel: "Varenblad in close-up",
-    categorie: "macro",
+    categorie: "paddenstoelen_planten",
     filters: { seizoen: "Lente", locatie: "Ardennen", onderwerp: "Plant" },
     afbeelding: "images/foto-varenblad.jpg",
     beschrijving: "De symmetrie van een ontvouwend varenblad, gefotografeerd in het diffuse licht van het bosdak.",
@@ -175,7 +180,7 @@ const FOTOS = [
   {
     id: "golven-tegen-de-rotskust",
     titel: "Golven tegen de rotskust",
-    categorie: "water",
+    categorie: "landschappen",
     filters: { seizoen: "Winter", locatie: "Bretagne", lichtinval: "Bewolkt" },
     afbeelding: "images/foto-rotskust.jpg",
     beschrijving: "Lange sluitertijd om de beweging van het water te vangen tegen de onbeweeglijke rotsen.",
@@ -187,7 +192,7 @@ const FOTOS = [
   {
     id: "spiegelend-meer-bij-dageraad",
     titel: "Spiegelend meer bij dageraad",
-    categorie: "water",
+    categorie: "landschappen",
     filters: { seizoen: "Zomer", locatie: "Alpen", lichtinval: "Zonsopgang" },
     afbeelding: "images/foto-meer.jpg",
     beschrijving: "Windstil water dat de bergen en de lucht als een spiegel weergeeft, vlak voor zonsopgang.",
@@ -201,7 +206,7 @@ const FOTOS = [
   {
     id: "onweerswolken-boven-de-vlakte",
     titel: "Onweerswolken boven de vlakte",
-    categorie: "lucht",
+    categorie: "landschappen",
     filters: { seizoen: "Zomer", locatie: "Vlaanderen", lichtinval: "Onweer" },
     afbeelding: "images/foto-onweer.jpg",
     beschrijving: "Een naderend onweersfront boven open landbouwgrond, met bliksem in de verte.",
@@ -213,7 +218,7 @@ const FOTOS = [
   {
     id: "noorderlicht-boven-dennen",
     titel: "Noorderlicht boven dennen",
-    categorie: "lucht",
+    categorie: "landschappen",
     filters: { seizoen: "Winter", locatie: "Lapland", lichtinval: "Nacht" },
     afbeelding: "images/foto-noorderlicht.jpg",
     beschrijving: "Groen en violet noorderlicht boven een besneeuwd dennenbos, na uren wachten bij -18°C.",
