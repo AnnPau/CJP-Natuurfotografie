@@ -90,11 +90,11 @@
       </div>
       <div class="veld">
         <label for="email">E-mailadres</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" placeholder="uw@email.com" required>
       </div>
       <div class="veld">
         <label for="telefoon">Telefoonnummer</label>
-        <input type="tel" id="telefoon" name="telefoon">
+        <input type="tel" id="telefoon" name="telefoon" placeholder="bv. +32 0 00 00 00 00" required>
       </div>
       <div class="veld">
         <label for="fotoNaam">Naam van de foto</label>
@@ -111,24 +111,31 @@
           <option value="anders">Ander / niet zeker, zie opmerkingen</option>
         </select>
       </div>
+      <div class="veld">
+        <label for="ontvangstmethode">Ontvangstmethode</label>
+        <select id="ontvangstmethode" name="ontvangstmethode" required>
+          <option value="">Kies de ontvangstmethode</option>
+          <option value="ophalen">ophalen</option>
+          <option value="levering">leveren</option>
+        </select>
       <div class="veld volledig">
         <label for="opmerkingen">Opmerkingen</label>
         <textarea id="opmerkingen" name="opmerkingen" placeholder="Bv. gewenste afwerking, lijst of aluminium, leverdatum, ..."></textarea>
       </div>
       <div class="volledig form-actions">
         <button type="submit" class="btn btn-goud">Bestelling versturen</button>
-        <span class="form-note">We reageren binnen 2 werkdagen per e-mail.</span>
+        <span class="form-note">We reageren zo snel mogelijk per e-mail.</span>
       </div>
     </form>
-    <p class="form-succes" id="formSucces">Bedankt! Uw e-mailprogramma opent met de bestelgegevens al ingevuld — verstuur die e-mail om de bestelling definitief te maken.</p>
+    <p class="form-succes" id="formSucces">Bedankt! Uw bestelling wordt verwerkt. We houden u op de hoogte via e-mail.</p>
 
     <!-- ============================================================ BETALING -->
     <div class="betaal-info">
       <span class="stap-nr">i</span>
       <div>
         <h3 style="font-size:1rem;text-transform:uppercase;letter-spacing:.08em;font-family:var(--font-body);font-weight:700;margin-bottom:.5rem;">Hoe verloopt de betaling?</h3>
-        <p style="color:var(--c-tekst-zacht);margin-bottom:.6rem;">Na het versturen van uw bestelling ontvangt u van ons een bevestiging per e-mail met het definitieve bedrag, inclusief eventuele verzendkosten. Betalen kan via overschrijving op ons rekeningnummer, dat in deze bevestigingsmail staat vermeld.</p>
-        <p style="color:var(--c-tekst-zacht);margin-bottom:0;">Zodra de betaling ontvangen is, starten we de afdruk en verzending. Levertijd bedraagt gemiddeld 5 tot 10 werkdagen, afhankelijk van formaat en afwerking.</p>
+        <p style="color:var(--c-tekst-zacht);margin-bottom:.6rem;">Bij ophalen dient u een voorschot van 20% te betalen. Na ontvangst van het voorschot wordt de afdruk gestart. Vervolgens haalt u de foto op te Herentals, waarbij u het resterende bedrag betaalt.</p>
+        <p style="color:var(--c-tekst-zacht);margin-bottom:0;">Kiest u voor levering, dan zal u op voorhand het volledige bedrag moeten overschrijven. Vervolgens wordt de afdruk gestart en wordt de foto aan uw adres geleverd.</p>
       </div>
     </div>
   </div>
