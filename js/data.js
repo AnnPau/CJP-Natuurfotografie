@@ -26,23 +26,23 @@ const CATEGORIEEN = [
     cover: "images/cover-landschappen.jpg"
   },
   {
-    slug: "dieren",
-    naam: "Dieren & Vogels",
+    slug: "zoogdieren",
+    naam: "Zoogdieren",
     cover: "images/cover-dieren.jpg"
   },
   {
-    slug: "macro",
-    naam: "Macro & Details",
+    slug: "vogels",
+    naam: "Vogels",
     cover: "images/cover-macro.jpg"
   },
   {
-    slug: "water",
-    naam: "Water & Kust",
+    slug: "insecten",
+    naam: "Insecten",
     cover: "images/cover-water.jpg"
   },
   {
-    slug: "lucht",
-    naam: "Lucht & Licht",
+    slug: "reptielen",
+    naam: "Reptielen",
     cover: "images/cover-lucht.jpg"
   }
 ];
@@ -76,7 +76,7 @@ const FOTOS = [
     id: "vos-in-de-mist",
     rank: 10,
     titel: "Vos in de ochtendmist",
-    categorie: "dieren",
+    categorie: "zoogdieren",
     filters: {
       seizoen: "Winter",
       locatie: "Ardennen",
@@ -137,7 +137,7 @@ const FOTOS = [
     id: "ree-in-het-kreupelhout",
     rank: 50,
     titel: "Ree in het kreupelhout",
-    categorie: "dieren",
+    categorie: "zoogdieren",
     filters: { seizoen: "Lente", locatie: "Veluwe", soort: "Zoogdier" },
     afbeelding: "images/foto-ree.jpg",
     beschrijving: "Een jonge ree kijkt op vanuit het kreupelhout, verrast door de stilte van de vroege ochtend.",
@@ -164,7 +164,7 @@ const FOTOS = [
     id: "dauwdruppel-op-spinnenweb",
     rank: 70,
     titel: "Dauwdruppel op spinnenweb",
-    categorie: "macro",
+    categorie: "landschappen",
     filters: { seizoen: "Herfst", locatie: "Tuin", onderwerp: "Insect" },
     afbeelding: "images/foto-spinnenweb.jpg",
     beschrijving: "Elke druppel op dit web weerspiegelt de omgeving in miniatuur. Genomen met een macrolens vlak na zonsopgang.",
@@ -177,7 +177,7 @@ const FOTOS = [
     id: "varenblad-in-close-up",
     rank: 80,
     titel: "Varenblad in close-up",
-    categorie: "macro",
+    categorie: "landschappen",
     filters: { seizoen: "Lente", locatie: "Ardennen", onderwerp: "Plant" },
     afbeelding: "images/foto-varenblad.jpg",
     beschrijving: "De symmetrie van een ontvouwend varenblad, gefotografeerd in het diffuse licht van het bosdak.",
@@ -190,7 +190,7 @@ const FOTOS = [
   {
     id: "golven-tegen-de-rotskust",
     rank: 90,
-    titel: "Golven tegen de rotskust",
+    titel: "landschappen",
     categorie: "water",
     filters: { seizoen: "Winter", locatie: "Bretagne", lichtinval: "Bewolkt" },
     afbeelding: "images/foto-rotskust.jpg",
@@ -204,7 +204,7 @@ const FOTOS = [
     id: "spiegelend-meer-bij-dageraad",
     rank: 100,
     titel: "Spiegelend meer bij dageraad",
-    categorie: "water",
+    categorie: "landschappen",
     filters: { seizoen: "Zomer", locatie: "Alpen", lichtinval: "Zonsopgang" },
     afbeelding: "images/foto-meer.jpg",
     beschrijving: "Windstil water dat de bergen en de lucht als een spiegel weergeeft, vlak voor zonsopgang.",
@@ -219,7 +219,7 @@ const FOTOS = [
     id: "onweerswolken-boven-de-vlakte",
     rank: 110,
     titel: "Onweerswolken boven de vlakte",
-    categorie: "lucht",
+    categorie: "landschappen",
     filters: { seizoen: "Zomer", locatie: "Vlaanderen", lichtinval: "Onweer" },
     afbeelding: "images/foto-onweer.jpg",
     beschrijving: "Een naderend onweersfront boven open landbouwgrond, met bliksem in de verte.",
@@ -232,7 +232,7 @@ const FOTOS = [
     id: "noorderlicht-boven-dennen",
     rank: 120,
     titel: "Noorderlicht boven dennen",
-    categorie: "lucht",
+    categorie: "landschappen",
     filters: { seizoen: "Winter", locatie: "Lapland", lichtinval: "Nacht" },
     afbeelding: "images/foto-noorderlicht.jpg",
     beschrijving: "Groen en violet noorderlicht boven een besneeuwd dennenbos, na uren wachten bij -18°C.",
