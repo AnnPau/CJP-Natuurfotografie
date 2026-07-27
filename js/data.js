@@ -21,34 +21,29 @@
    -------------------------------------------------------------------- */
 const CATEGORIEEN = [
   {
-    slug: "vogels",
-    naam: "Vogels",
-    cover: "images/cover-vogels.jpg"
-  },
-  {
-    slug: "zoogdieren",
-    naam: "Zoogdieren",
-    cover: "images/cover-zoogdieren.jpg"
-  },
-  {
-    slug: "reptielen",
-    naam: "Reptielen",
-    cover: "images/cover-reptielen.jpg"
-  },
-  {
-    slug: "insecten",
-    naam: "Insecten",
-    cover: "images/cover-water.jpg"
-  },
-  {
     slug: "landschappen",
     naam: "Landschappen",
     cover: "images/cover-landschappen.jpg"
   },
   {
-    slug: "paddenstoelen_planten",
-    naam: "Paddenstoelen & planten",
-    cover: "images/cover-paddenstoelen.jpg"
+    slug: "dieren",
+    naam: "Dieren & Vogels",
+    cover: "images/cover-dieren.jpg"
+  },
+  {
+    slug: "macro",
+    naam: "Macro & Details",
+    cover: "images/cover-macro.jpg"
+  },
+  {
+    slug: "water",
+    naam: "Water & Kust",
+    cover: "images/cover-water.jpg"
+  },
+  {
+    slug: "lucht",
+    naam: "Lucht & Licht",
+    cover: "images/cover-lucht.jpg"
   }
 ];
 
@@ -58,6 +53,13 @@ const CATEGORIEEN = [
                   wordt gebruikt in de URL van de fotopagina
    titel        : titel die overal getoond wordt
    categorie    : moet exact overeenkomen met een 'slug' hierboven
+   rank         : een getal (1, 2, 3, ...) dat de vaste volgorde bepaalt
+                  waarin de foto's getoond worden — zowel binnen een
+                  categorie als op de pagina "Alle foto's". Lager
+                  getal = eerder getoond. Elk getal mag maar één keer
+                  gebruikt worden; hou best een beetje ruimte tussen de
+                  nummers (bv. 10, 20, 30, ...) zodat je later makkelijk
+                  een nieuwe foto ertussen kan schuiven.
    filters      : vrij te kiezen groepen waarop bezoekers kunnen filteren
                   op de categoriepagina. Gebruik dezelfde groepnaam
                   (bv. "seizoen") consequent zodat de filterbalk ze
@@ -72,12 +74,13 @@ const FOTOS = [
   // ===== VOORBEELD — kopieer dit blok om een nieuwe foto toe te voegen =====
   {
     id: "vos-in-de-mist",
+    rank: 10,
     titel: "Vos in de ochtendmist",
-    categorie: "zoogdieren",
+    categorie: "dieren",
     filters: {
       seizoen: "Winter",
       locatie: "Ardennen",
-      soort: "Vos"
+      soort: "Zoogdier"
     },
     afbeelding: "images/foto-vos-in-de-mist.jpg",
     beschrijving: "Vlak na zonsopgang stak deze vos het open veld over. De mist demptte alle geluid, waardoor ik dichterbij kon sluipen dan normaal mogelijk is.",
@@ -91,6 +94,7 @@ const FOTOS = [
 
   {
     id: "berghelling-bij-zonsopgang",
+    rank: 20,
     titel: "Berghelling bij zonsopgang",
     categorie: "landschappen",
     filters: { seizoen: "Herfst", locatie: "Alpen", lichtinval: "Zonsopgang" },
@@ -104,6 +108,7 @@ const FOTOS = [
   },
   {
     id: "mistige-dennenbossen",
+    rank: 30,
     titel: "Mistige dennenbossen",
     categorie: "landschappen",
     filters: { seizoen: "Herfst", locatie: "Ardennen", lichtinval: "Ochtendlicht" },
@@ -116,6 +121,7 @@ const FOTOS = [
   },
   {
     id: "korenveld-in-de-avond",
+    rank: 40,
     titel: "Korenveld in de avond",
     categorie: "landschappen",
     filters: { seizoen: "Zomer", locatie: "Vlaanderen", lichtinval: "Zonsondergang" },
@@ -129,8 +135,9 @@ const FOTOS = [
 
   {
     id: "ree-in-het-kreupelhout",
+    rank: 50,
     titel: "Ree in het kreupelhout",
-    categorie: "zoogdieren",
+    categorie: "dieren",
     filters: { seizoen: "Lente", locatie: "Veluwe", soort: "Zoogdier" },
     afbeelding: "images/foto-ree.jpg",
     beschrijving: "Een jonge ree kijkt op vanuit het kreupelhout, verrast door de stilte van de vroege ochtend.",
@@ -141,8 +148,9 @@ const FOTOS = [
   },
   {
     id: "ijsvogel-op-de-uitkijk",
+    rank: 60,
     titel: "IJsvogel op de uitkijk",
-    categorie: "vogels",
+    categorie: "dieren",
     filters: { seizoen: "Zomer", locatie: "Vlaanderen", soort: "Vogel" },
     afbeelding: "images/foto-ijsvogel.jpg",
     beschrijving: "Na drie ochtenden wachten in de schuilhut kwam deze ijsvogel eindelijk binnen bereik van de lens.",
@@ -154,8 +162,9 @@ const FOTOS = [
 
   {
     id: "dauwdruppel-op-spinnenweb",
+    rank: 70,
     titel: "Dauwdruppel op spinnenweb",
-    categorie: "insecten",
+    categorie: "macro",
     filters: { seizoen: "Herfst", locatie: "Tuin", onderwerp: "Insect" },
     afbeelding: "images/foto-spinnenweb.jpg",
     beschrijving: "Elke druppel op dit web weerspiegelt de omgeving in miniatuur. Genomen met een macrolens vlak na zonsopgang.",
@@ -166,8 +175,9 @@ const FOTOS = [
   },
   {
     id: "varenblad-in-close-up",
+    rank: 80,
     titel: "Varenblad in close-up",
-    categorie: "paddenstoelen_planten",
+    categorie: "macro",
     filters: { seizoen: "Lente", locatie: "Ardennen", onderwerp: "Plant" },
     afbeelding: "images/foto-varenblad.jpg",
     beschrijving: "De symmetrie van een ontvouwend varenblad, gefotografeerd in het diffuse licht van het bosdak.",
@@ -179,8 +189,9 @@ const FOTOS = [
 
   {
     id: "golven-tegen-de-rotskust",
+    rank: 90,
     titel: "Golven tegen de rotskust",
-    categorie: "landschappen",
+    categorie: "water",
     filters: { seizoen: "Winter", locatie: "Bretagne", lichtinval: "Bewolkt" },
     afbeelding: "images/foto-rotskust.jpg",
     beschrijving: "Lange sluitertijd om de beweging van het water te vangen tegen de onbeweeglijke rotsen.",
@@ -191,8 +202,9 @@ const FOTOS = [
   },
   {
     id: "spiegelend-meer-bij-dageraad",
+    rank: 100,
     titel: "Spiegelend meer bij dageraad",
-    categorie: "landschappen",
+    categorie: "water",
     filters: { seizoen: "Zomer", locatie: "Alpen", lichtinval: "Zonsopgang" },
     afbeelding: "images/foto-meer.jpg",
     beschrijving: "Windstil water dat de bergen en de lucht als een spiegel weergeeft, vlak voor zonsopgang.",
@@ -205,8 +217,9 @@ const FOTOS = [
 
   {
     id: "onweerswolken-boven-de-vlakte",
+    rank: 110,
     titel: "Onweerswolken boven de vlakte",
-    categorie: "landschappen",
+    categorie: "lucht",
     filters: { seizoen: "Zomer", locatie: "Vlaanderen", lichtinval: "Onweer" },
     afbeelding: "images/foto-onweer.jpg",
     beschrijving: "Een naderend onweersfront boven open landbouwgrond, met bliksem in de verte.",
@@ -217,8 +230,9 @@ const FOTOS = [
   },
   {
     id: "noorderlicht-boven-dennen",
+    rank: 120,
     titel: "Noorderlicht boven dennen",
-    categorie: "landschappen",
+    categorie: "lucht",
     filters: { seizoen: "Winter", locatie: "Lapland", lichtinval: "Nacht" },
     afbeelding: "images/foto-noorderlicht.jpg",
     beschrijving: "Groen en violet noorderlicht boven een besneeuwd dennenbos, na uren wachten bij -18°C.",
@@ -236,11 +250,22 @@ const FOTOS = [
 /* --------------------------------------------------------------------
    Hulpfuncties — gebruikt door portfolio.js, hoeft u niet aan te passen
    -------------------------------------------------------------------- */
+
+// Virtuele categorie "alle foto's" — geen echte categorie uit de lijst
+// hierboven, maar wordt gebruikt door de knop "Alle foto's" op de
+// portfolio-pagina om alle foto's samen te tonen.
+const ALLE_FOTOS_SLUG = "alle";
+
+function opVolgordeGesorteerd(lijst){
+  return [...lijst].sort((a, b) => (a.rank ?? 9999) - (b.rank ?? 9999));
+}
 function vindCategorie(slug){
+  if (slug === ALLE_FOTOS_SLUG) return { slug: ALLE_FOTOS_SLUG, naam: "Alle foto's" };
   return CATEGORIEEN.find(c => c.slug === slug);
 }
 function fotosVanCategorie(slug){
-  return FOTOS.filter(f => f.categorie === slug);
+  if (slug === ALLE_FOTOS_SLUG) return opVolgordeGesorteerd(FOTOS);
+  return opVolgordeGesorteerd(FOTOS.filter(f => f.categorie === slug));
 }
 function vindFoto(id){
   return FOTOS.find(f => f.id === id);
