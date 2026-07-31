@@ -73,17 +73,16 @@ const FOTOS = [
 
   // ===== VOORBEELD — kopieer dit blok om een nieuwe foto toe te voegen =====
   {
-    id: "vos-in-de-mist",
-    rank: 10,
-    titel: "Vos in de ochtendmist",
+    id: "aap01",
+    rank: 1,
+    titel: "Aap01",
     categorie: "zoogdieren",
     filters: {
       seizoen: "Winter",
-      locatie: "Ardennen",
-      soort: "Zoogdier"
+      locatie: "?",
     },
-    afbeelding: "images/foto-vos-in-de-mist.jpg",
-    beschrijving: "Vlak na zonsopgang stak deze vos het open veld over. De mist demptte alle geluid, waardoor ik dichterbij kon sluipen dan normaal mogelijk is.",
+    afbeelding: "images/portfolio/aap01.jpg",
+    beschrijving: "Typ hier je tekst...",
     formaten: [
       { naam: "30 × 20 cm", prijs: "€ 45" },
       { naam: "60 × 40 cm", prijs: "€ 95" },
@@ -93,156 +92,151 @@ const FOTOS = [
   },
 
   {
-    id: "berghelling-bij-zonsopgang",
-    rank: 20,
-    titel: "Berghelling bij zonsopgang",
-    categorie: "landschappen",
-    filters: { seizoen: "Herfst", locatie: "Alpen", lichtinval: "Zonsopgang" },
-    afbeelding: "images/foto-berghelling.jpg",
-    beschrijving: "Het eerste licht kleurt de bergtoppen goud, terwijl de vallei nog in de schaduw ligt. Genomen na een nachtelijke beklimming.",
-    formaten: [
-      { naam: "40 × 30 cm", prijs: "€ 55" },
-      { naam: "80 × 60 cm", prijs: "€ 135" },
-      { naam: "120 × 90 cm", prijs: "€ 245" }
-    ]
-  },
-  {
-    id: "mistige-dennenbossen",
-    rank: 30,
-    titel: "Mistige dennenbossen",
-    categorie: "landschappen",
-    filters: { seizoen: "Herfst", locatie: "Ardennen", lichtinval: "Ochtendlicht" },
-    afbeelding: "images/foto-dennenbos.jpg",
-    beschrijving: "Laagliggende mist tussen de naaldbomen, kort na zonsopgang. Elke laag bomen wordt lichter naarmate de diepte toeneemt.",
-    formaten: [
-      { naam: "40 × 30 cm", prijs: "€ 55" },
-      { naam: "80 × 60 cm", prijs: "€ 135" }
-    ]
-  },
-  {
-    id: "korenveld-in-de-avond",
-    rank: 40,
-    titel: "Korenveld in de avond",
-    categorie: "landschappen",
-    filters: { seizoen: "Zomer", locatie: "Vlaanderen", lichtinval: "Zonsondergang" },
-    afbeelding: "images/foto-korenveld.jpg",
-    beschrijving: "Het gouden uur over een korenveld in de Vlaamse velden, met een enkele verweerde boom als middelpunt.",
-    formaten: [
-      { naam: "30 × 20 cm", prijs: "€ 45" },
-      { naam: "60 × 40 cm", prijs: "€ 95" }
-    ]
-  },
-
-  {
-    id: "ree-in-het-kreupelhout",
-    rank: 50,
-    titel: "Ree in het kreupelhout",
+    id: "aap02",
+    rank: 2,
+    titel: "Aap02",
     categorie: "zoogdieren",
-    filters: { seizoen: "Lente", locatie: "Veluwe", soort: "Zoogdier" },
-    afbeelding: "images/foto-ree.jpg",
-    beschrijving: "Een jonge ree kijkt op vanuit het kreupelhout, verrast door de stilte van de vroege ochtend.",
-    formaten: [
-      { naam: "30 × 20 cm", prijs: "€ 45" },
-      { naam: "60 × 40 cm", prijs: "€ 95" }
-    ]
-  },
-  {
-    id: "ijsvogel-op-de-uitkijk",
-    rank: 60,
-    titel: "IJsvogel op de uitkijk",
-    categorie: "dieren",
-    filters: { seizoen: "Zomer", locatie: "Vlaanderen", soort: "Vogel" },
-    afbeelding: "images/foto-ijsvogel.jpg",
-    beschrijving: "Na drie ochtenden wachten in de schuilhut kwam deze ijsvogel eindelijk binnen bereik van de lens.",
-    formaten: [
-      { naam: "30 × 20 cm", prijs: "€ 45" },
-      { naam: "60 × 40 cm", prijs: "€ 95" }
-    ]
-  },
-
-  {
-    id: "dauwdruppel-op-spinnenweb",
-    rank: 70,
-    titel: "Dauwdruppel op spinnenweb",
-    categorie: "landschappen",
-    filters: { seizoen: "Herfst", locatie: "Tuin", onderwerp: "Insect" },
-    afbeelding: "images/foto-spinnenweb.jpg",
-    beschrijving: "Elke druppel op dit web weerspiegelt de omgeving in miniatuur. Genomen met een macrolens vlak na zonsopgang.",
-    formaten: [
-      { naam: "20 × 20 cm", prijs: "€ 35" },
-      { naam: "40 × 40 cm", prijs: "€ 75" }
-    ]
-  },
-  {
-    id: "varenblad-in-close-up",
-    rank: 80,
-    titel: "Varenblad in close-up",
-    categorie: "landschappen",
-    filters: { seizoen: "Lente", locatie: "Ardennen", onderwerp: "Plant" },
-    afbeelding: "images/foto-varenblad.jpg",
-    beschrijving: "De symmetrie van een ontvouwend varenblad, gefotografeerd in het diffuse licht van het bosdak.",
-    formaten: [
-      { naam: "20 × 20 cm", prijs: "€ 35" },
-      { naam: "40 × 40 cm", prijs: "€ 75" }
-    ]
-  },
-
-  {
-    id: "golven-tegen-de-rotskust",
-    rank: 90,
-    titel: "landschappen",
-    categorie: "water",
-    filters: { seizoen: "Winter", locatie: "Bretagne", lichtinval: "Bewolkt" },
-    afbeelding: "images/foto-rotskust.jpg",
-    beschrijving: "Lange sluitertijd om de beweging van het water te vangen tegen de onbeweeglijke rotsen.",
-    formaten: [
-      { naam: "40 × 30 cm", prijs: "€ 55" },
-      { naam: "80 × 60 cm", prijs: "€ 135" }
-    ]
-  },
-  {
-    id: "spiegelend-meer-bij-dageraad",
-    rank: 100,
-    titel: "Spiegelend meer bij dageraad",
-    categorie: "landschappen",
-    filters: { seizoen: "Zomer", locatie: "Alpen", lichtinval: "Zonsopgang" },
-    afbeelding: "images/foto-meer.jpg",
-    beschrijving: "Windstil water dat de bergen en de lucht als een spiegel weergeeft, vlak voor zonsopgang.",
+    filters: {
+      seizoen: "Winter",
+      locatie: "?",
+    },
+    afbeelding: "images/portfolio/aap02.jpg",
+    beschrijving: "Typ hier je tekst...",
     formaten: [
       { naam: "40 × 30 cm", prijs: "€ 55" },
       { naam: "80 × 60 cm", prijs: "€ 135" },
       { naam: "120 × 90 cm", prijs: "€ 245" }
     ]
   },
-
+   
   {
-    id: "onweerswolken-boven-de-vlakte",
-    rank: 110,
-    titel: "Onweerswolken boven de vlakte",
-    categorie: "landschappen",
-    filters: { seizoen: "Zomer", locatie: "Vlaanderen", lichtinval: "Onweer" },
-    afbeelding: "images/foto-onweer.jpg",
-    beschrijving: "Een naderend onweersfront boven open landbouwgrond, met bliksem in de verte.",
+    id: "nijlpaard01",
+    rank: 3,
+    titel: "Nijlpaard01",
+    categorie: "zoogdieren",
+    filters: {
+      locatie: "?",
+    },
+    afbeelding: "images/portfolio/nijlpaard01.jpg",
+    beschrijving: "Typ hier je tekst...",
     formaten: [
       { naam: "40 × 30 cm", prijs: "€ 55" },
       { naam: "80 × 60 cm", prijs: "€ 135" }
     ]
   },
+   
   {
-    id: "noorderlicht-boven-dennen",
-    rank: 120,
-    titel: "Noorderlicht boven dennen",
-    categorie: "landschappen",
-    filters: { seizoen: "Winter", locatie: "Lapland", lichtinval: "Nacht" },
-    afbeelding: "images/foto-noorderlicht.jpg",
-    beschrijving: "Groen en violet noorderlicht boven een besneeuwd dennenbos, na uren wachten bij -18°C.",
+    id: "pinguin01",
+    rank: 4,
+    titel: "Pinguïn01",
+    categorie: "vogels",
+    filters: {
+      seizoen: "Winter",
+      locatie: "?",
+    },
+    afbeelding: "images/portfolio/pinguin01.jpg",
+    beschrijving: "Typ hier je tekst...",
     formaten: [
-      { naam: "40 × 30 cm", prijs: "€ 55" },
-      { naam: "80 × 60 cm", prijs: "€ 135" },
-      { naam: "Op aluminium, 90 × 60 cm", prijs: "€ 245" }
+      { naam: "30 × 20 cm", prijs: "€ 45" },
+      { naam: "60 × 40 cm", prijs: "€ 95" }
     ]
-  }
+  },
 
+  {
+    id: "uil01",
+    rank: 5,
+    titel: "Uil01",
+    categorie: "vogels",
+    filters: {
+      locatie: "?",
+    },
+    afbeelding: "images/portfolio/uil01.jpg",
+    beschrijving: "Typ hier je tekst...",
+    formaten: [
+      { naam: "30 × 20 cm", prijs: "€ 45" },
+      { naam: "60 × 40 cm", prijs: "€ 95" }
+    ]
+  },
+   
+  {
+    id: "vlinder01",
+    rank: 6,
+    titel: "Vlinder01",
+    categorie: "insecten",
+    filters: {
+      locatie: "?",
+    },
+    afbeelding: "images/portfolio/vlinder01.jpg",
+    beschrijving: "Typ hier je tekst...",
+    formaten: [
+      { naam: "30 × 20 cm", prijs: "€ 45" },
+      { naam: "60 × 40 cm", prijs: "€ 95" }
+    ]
+  },
+
+  {
+    id: "vogel01",
+    rank: 7,
+    titel: "Vogel01",
+    categorie: "vogels",
+    filters: {
+      locatie: "?",
+    },
+    afbeelding: "images/portfolio/vogel01.jpg",
+    beschrijving: "Typ hier je tekst...",
+    formaten: [
+      { naam: "20 × 20 cm", prijs: "€ 35" },
+      { naam: "40 × 40 cm", prijs: "€ 75" }
+    ]
+  },
+   
+  {
+    id: "vogel02",
+    rank: 8,
+    titel: "Vogel02",
+    categorie: "vogels",
+    filters: {
+      locatie: "?",
+    },
+    afbeelding: "images/portfolio/vogel02.jpg",
+    beschrijving: "Typ hier je tekst...",
+    formaten: [
+      { naam: "20 × 20 cm", prijs: "€ 35" },
+      { naam: "40 × 40 cm", prijs: "€ 75" }
+    ]
+  },
+
+  {
+    id: "vogel03",
+    rank: 9,
+    titel: "Vogel03",
+    categorie: "vogels",
+    filters: {
+      locatie: "?",
+    },
+    afbeelding: "images/portfolio/vogel03.jpg",
+    beschrijving: "Typ hier je tekst...",
+    formaten: [
+      { naam: "20 × 20 cm", prijs: "€ 35" },
+      { naam: "40 × 40 cm", prijs: "€ 75" }
+    ]
+  },
+
+  {
+    id: "vogel04",
+    rank: 10,
+    titel: "Vogel04",
+    categorie: "vogels",
+    filters: {
+      locatie: "?",
+    },
+    afbeelding: "images/portfolio/vogel04.jpg",
+    beschrijving: "Typ hier je tekst...",
+    formaten: [
+      { naam: "20 × 20 cm", prijs: "€ 35" },
+      { naam: "40 × 40 cm", prijs: "€ 75" }
+    ]
+  },
   // ===== nieuwe foto's hieronder toevoegen (komma tussen elk object!) =====
 
 ];
