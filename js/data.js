@@ -237,6 +237,22 @@ const FOTOS = [
       { naam: "40 × 40 cm", prijs: "€ 75" }
     ]
   },
+
+  {
+    id: "vogel05",
+    rank: 11,
+    titel: "Vogel05",
+    categorie: "vogels",
+    filters: {
+      locatie: "?",
+    },
+    afbeelding: "images/portfolio/vogel05.jpg",
+    beschrijving: "Typ hier je tekst...",
+    formaten: [
+      { naam: "20 × 20 cm", prijs: "€ 35" },
+      { naam: "40 × 40 cm", prijs: "€ 75" }
+    ]
+  },
   // ===== nieuwe foto's hieronder toevoegen (komma tussen elk object!) =====
 
 ];
