@@ -21,29 +21,39 @@
    -------------------------------------------------------------------- */
 const CATEGORIEEN = [
   {
-    slug: "landschappen",
-    naam: "Landschappen",
-    cover: "images/cover-landschappen.jpg"
+    slug: "europa",
+    naam: "Europa",
+    cover: "images/cover-europa.jpg"
   },
   {
-    slug: "zoogdieren",
-    naam: "Zoogdieren",
-    cover: "images/cover-dieren.jpg"
+    slug: "afrika",
+    naam: "Afrika",
+    cover: "images/cover-afrika.jpg"
   },
   {
-    slug: "vogels",
-    naam: "Vogels",
-    cover: "images/cover-macro.jpg"
+    slug: "noordamerika",
+    naam: "Noord-Amerika",
+    cover: "images/cover-noordamerika.jpg"
   },
   {
-    slug: "insecten",
-    naam: "Insecten",
-    cover: "images/cover-water.jpg"
+    slug: "middenamerika",
+    naam: "Midden-Amerika",
+    cover: "images/cover-middenamerika.jpg"
   },
   {
-    slug: "reptielen",
-    naam: "Reptielen",
-    cover: "images/cover-lucht.jpg"
+    slug: "zuidamerika",
+    naam: "Zuid-Amerika",
+    cover: "images/cover-zuidamerika.jpg"
+  },
+  {
+    slug: "azie",
+    naam: "Azië",
+    cover: "images/cover-azie.jpg"
+  },
+  {
+    slug: "antarctica",
+    naam: "Antarctica & Subantarctische eilanden",
+    cover: "images/cover-antarctica.jpg"
   }
 ];
 
